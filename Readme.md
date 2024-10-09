@@ -1,16 +1,8 @@
-PetCare Website
-Welcome to the PetCare website! This project is a comprehensive platform designed for pet owners to manage and care for their pets. The website features user-friendly interfaces for tracking pet health, scheduling appointments, and accessing pet care resources.
+# PetCare
+> A Pet Shop Website Made Using HTML, CSS and Javascript
 
-Technologies Used
-Frontend: HTML, CSS, JavaScript
-Backend: Node.js
-Database: MySQL
-Features
-Admin authentication
-Pet profiles for tracking health and activities
-Appointment scheduling with reminders
-Resource library for pet care tips and guides
+MediHeart is a simple pet shop website. It is a responsive. I made this website as an internship project for [@CodingWiz](https://www.codingwiz.in/).
 
-Its all code using ejs, sql, express and js  
+## Website Output
 
-if you having errors or issues send a mail to me at oyeniyitheophilus2@gmail.com
+You can view this website from [here](https://pet-care-one.vercel.app/)!

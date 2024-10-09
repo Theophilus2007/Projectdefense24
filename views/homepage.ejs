@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petcareadmin</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Admin Dashboard</title>
+    <!--------------------------------------------------Stylings Section --------------------------------------------->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+       
+        body{
+            background-color: #F5F5DC;
+            font-family: poppins sans-serif;
+        }
+
+        .sidebars{
+            display: flex;
+            flex-direction: column;
+            background-color: #F5F5DC;
+            color:black;
+            width: 250px;
+            border-bottom-right-radius: 10px;
+            height: 750px;
+            box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+            padding: auto;
+            margin-left: 20px;
+        }
+
+  #Dashboard:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .Patient:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        #Doctors:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        #Employees:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        #Pharmacy:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        #Accounting:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        #Appointment:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        #Logout:hover{
+            color: white;
+            cursor: pointer;
+        }
+a{
+    color: white;
+
+}
+body{
+    font-family: poppins;
+}
+
+*{
+    margin: 0;
+}
+   #Navbarul{
+        display: flex;
+        gap: 10%;
+        list-style-type: none;
+    }
+
+    #sidebarsul{
+padding-top: 20px;
+margin-top: 90px;
+
+    }
+
+    #Dashboarddesigns{
+        background-color: rgb(236, 235, 235);
+        margin-top: -565px;
+        width: 1200px;
+        margin-left: 350px;
+        border: 10px;
+        border-radius: 10px;
+        border-color: black;
+        padding: 20px;
+        box-shadow: 5px 10px 5px 0 rgba(0, 0,  0, 1.0);
+        margin-top: -665px;
+        height: auto;
+    }
+
+    /* ul li
+        list-style-type: none;
+    } */
+
+    nav{
+        background-color:rgb(212, 211, 209);
+        height: 30px;
+        font-size: 20px;
+        margin: 0;
+        padding: 25px;
+        width: 100%;
+        color: white;
+        position: fixed;
+    }
+    #Attends{
+        box-shadow: 5px 4px 10px 0 rgba(241, 240, 240, 1.0);
+        background-color: white;
+        width: 300px;
+        height: 100px;
+border-radius: 10px;
+box-shadow: black;
+padding: 10px;
+    }
+
+    @media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    header{
+        padding: 2rem;
+    }
+    .Dashboard{
+        width: 100%;
+        padding-left: 8em;
+    }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display: initial;
+    }
+
+    header nav{
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        border-radius: .5rem;
+        box-shadow:var(--box-shadow);
+        width: 30rem;
+        border: var(--border);
+        background: #fff;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+
+    header .navbar.active{
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out; 
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+    .Dashboard{
+        width: 100%;
+        padding-left: 4em;
+    }
+}
+    #Appointments{
+        box-shadow: 5px 4px 10px 0 rgba(251, 251, 251, 0.5);
+        background-color: white;
+        width: 300px;
+        height: 100px;
+border-radius: 10px;
+padding: 10px;
+margin-top: -120px;
+margin-left: 550px;  
+    }
+
+    #Doctor{
+        box-shadow: 5px 4px 10px 0 rgba(251, 251, 251, 0.5);
+        background-color: white;
+        width: 200px;
+        height: 70px;
+border-top-left-radius: 25px;
+border-bottom-right-radius: 25px;
+padding: 10px;
+margin-top: -90px;
+margin-left: 830px;  
+    }
+    .sidebars{
+        width: 300px;
+    }
+    a{
+        color: black;
+    }
+    #items{
+        color: black;
+        font-size: 60px;
+        font-weight: 20px;
+    }
+
+    #itemsa{
+        color: black;
+        font-size: 60px;
+        font-weight: 20px; 
+    }
+  
+    .lead-details{
+            width: 950px;
+            height: fit-content;
+            background-color: #fff;
+            margin-left: 2%;
+            margin-top: 3%;
+            border-radius: 10px;
+            padding: 3%;
+           font-family:  poppins;
+        }
+        .lead-details h2{
+            font-family:poppins;;
+            font-size: 18px;
+        }
+        .lead-details table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        tr td{
+            text-align: center;
+            padding: 2%;
+            font-size: 20px;
+            font-family: poppins;
+           
+        }
+        th{
+            height: 50px;
+            background-color: black;
+            font-size: 16px;
+            font-family: poppins;
+            color: white;
+        }
+        tbody{
+            background-color: white;
+        }
+        .G{
+            transition: 0.3s;
+animation: spin 2s ease;
+text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/admin">
+    <!------------------------------------------- The Html Part Section-------------------------------------------->
+   <header>
+    <div class="Navbar">
+    <nav>
+        <ul id="Navbarul">
+            <li style="font-size: 30px; color: black;" id="" >Pet Care Website</li>
+        </ul>
+    </nav>
+</div>
+</header>
+    <div class="sidebars" >
+        <ul id="sidebarsul" style="list-style-type: none;">
+            <box-icon name='dashboard' type='solid' animation='spin' ></box-icon> <li id="Dashboard">Dashboard</li><br>
+            <box-icon name='detail' animation='spin' ></box-icon> <li id="Accounting" class="G"><a href="/appointment/submit" class="G" id="appointments"> Appointment</a></li><br><br>
+            <box-icon name='user-pin' animation='spin' ></box-icon><li><a href="/contact/submit" id="reviews" class="G">Reviews</a></li><br>
+          <box-icon name='log-out-circle' animation='spin' ></box-icon> <li id="Logout" class="G"><a href="/logout" class="G">Logout</a></li>
+          <br>
+        </ul>
+    </div>
+
+    <div class="Dashboard">
+<div id="Dashboarddesigns">
+<h3 style="color: black">Pet Care Management System</h3><br>
+<div id="Attends">
+    <h3 id="items"></h3>
+    <h4>Reviews</h4>
+</div>
+<div id="Appointments">
+   <h3 id="itemsa"></h3>
+   <h4>Appointment</h4>
+</div>
+
+<div class="lead-details">
+    <h2>APPOINTMENT</h2>
+    <table class="table-data">
+        <tr>
+            <th>Id</th>
+            <th> Fullname</th>
+            <th>Email </th>
+            <th>Pet species</th>
+          <th>Medical Info</th> 
+          <th>Behavior</th>
+          <th> Medica History</th>
+        </tr>
+        <tbody id="appointmenttable">
+        </tbody>
+    </table><br>
+    <h2>REVIEWS</h2>
+    <table class="table-data">
+        <tr>
+            <th>Id</th>
+            <th> Fullname</th>
+            <th>Email </th>
+            <th>Problem</th>
+          <th>Reviews</th> 
+        </tr>
+        <tbody id="reviewstable">
+        </tbody>
+    </table>
+    <br>
+</div>
+</div>
+</form>
+<script>
+    
+    document.querySelector("#Logout").addEventListener('click', (e)=>{
+        if(confirm('Do you want to logout?') == true){
+      fetch('/logout', {
+        method: 'get'}
+        )
+    }else{
+        e.preventDefault()
+    }})
+
+    // Appointment Table
+    document.querySelector("#appointments").addEventListener("click", (e)=>{
+            e.preventDefault()
+            fetch('/appointment/submit')
+            .then(res => res.json())
+            .then(res => {
+                const data = res
+                let rows = ''
+                data.forEach(hospital => {
+                    rows += `<tr>
+                        <td>${hospital.id}</td>
+                               <td>${hospital.Fullname}</td>
+                        <td>${hospital.email}</td>
+                        <td>${hospital.petspicies}</td>
+                        <td>${hospital.medicalinfo}</td>
+                            <td>${hospital.behavior}</td>
+                              <td>${hospital.medicalhistory}</td>
+                        </tr>`
+             })
+                document.getElementById('appointmenttable').innerHTML = rows;
+            })
+            .catch(error => console.log(error))
+    })
+
+    // reviews Table
+    document.querySelector("#reviews").addEventListener("click", (e)=>{
+            e.preventDefault()
+            fetch('/contact/submit')
+            .then(res => res.json())
+            .then(res => {
+                const data = res
+                let rows = ''
+                data.forEach(hospital=> {
+                    rows += `<tr>
+                        <td>${hospital.id}</td>
+                               <td>${hospital.fullname}</td>
+                        <td>${hospital.email}</td>
+                        <td>${hospital.problem}</td>
+                        <td>${hospital.review}</td
+                        </tr>`
+             })
+                document.getElementById('reviewstable').innerHTML = rows;
+            })
+            .catch(error => console.log(error))
+    })
+
+fetch('/contact/submit')
+        .then(res => res.json())
+        .then(res => {
+            const data = res
+            document.getElementById('items').innerHTML = data.length
+        });
+
+        fetch('/appointment/submit')
+        .then(res => res.json())
+        .then(res => {
+            const data = res
+            document.getElementById('itemsa').innerHTML = data.length
+        });  
+</script>
+</body>
+</html>
+</body>
+</html>
